@@ -2,7 +2,12 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const CookiePolicy = () => {
-  const [isExpanded, setIsExpanded] = useState({});
+  const [isExpanded, setIsExpanded] = useState({
+    'what-we-collect': true,
+    'how-we-use': true,
+    'third-party': true,
+    'manage': true,
+  });
 
   const toggleSection = (section) => {
     setIsExpanded(prev => ({
